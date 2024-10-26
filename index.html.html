@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Audio</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #2c3e50; /* màu xanh đậm, mang sắc thái u buồn */
+            font-family: Arial, sans-serif;
+            color: #bdc3c7;
+        }
+
+        .play-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            color: #ecf0f1; /* màu xám nhạt cho nút */
+            background-color: #34495e; /* màu xanh than tối */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .play-button:hover {
+            background-color: #3b3f46; /* màu tối hơn khi hover */
+            transform: scale(1.05); /* hiệu ứng phóng to nhẹ khi di chuột */
+        }
+
+        .play-button:focus {
+            outline: none;
+        }
+
+        /* Hiệu ứng âm thanh để tạo nét buồn */
+        #audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button class="play-button" onclick="playAudio()">Click</button>
+    <audio id="audio" src="nyc.mp4"></audio>
+
+    <script>
+        function playAudio() {
+            var audio = document.getElementById("audio");
+            audio.play();
+        }
+    </script>
+</body>
+</html>
